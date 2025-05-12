@@ -1,0 +1,9 @@
+Comando para juntar as tabelas de livros e autores.
+select * from autores, livros, autores_livros where autores.id = autores_livros.autores_id and livros.id = autores_livros.livros_id
+
+select * from autores, artigos, autores_artigos where autores.id = autores_artigos.autor_id and artigos.id = autores_artigos.artigos_id
+
+SELECT *  FROM autores JOIN autores_artigos ON autores.id = autores_artigos.autor_id JOIN artigos ON artigos.id = autores_artigos.artigos_id JOIN revistas ON artigos.revista_id = revistas.id;
+
+
+

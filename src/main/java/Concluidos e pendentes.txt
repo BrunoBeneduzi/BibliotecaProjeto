@@ -1,0 +1,19 @@
+Feitos:
+1- Cadastro de livros OK
+2 - Cadastro de autore OK
+3 - Listagem de livros OK
+4 - Listagem de autores OK
+5 - filtros de titulo, genero, sobrenome do autores OK
+6 - criar a classe artigo OK
+7 - criar a classe revista OK 
+8 - colocar um List artigo na classe autor OK
+9 - criar listar de artigos e revistas OK 
+10 - criar cadastro de artigos e revistas OK
+
+Pendentes:
+
+
+Tarefas de conclusão:
+1 - verificar todas as classes e garantir que os erros foram tratados
+2 - verificar se é possivel reduzir o codigo
+3 - garantir que a ortografia esteja correta
