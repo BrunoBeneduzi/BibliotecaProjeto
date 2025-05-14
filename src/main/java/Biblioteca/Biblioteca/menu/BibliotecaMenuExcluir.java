@@ -14,6 +14,7 @@ public class BibliotecaMenuExcluir {
 	private BibliotecaServiceExclusao excluir;
 	private Scanner sc = new Scanner(System.in);
 	private int escolha = 0;
+	
 	public void menuExcluirLivro() {
 		
 		System.out.print("Digite o que deseja excluir"+"\n1- Livros"+"\n2- Revistas"+"\n-> ");

@@ -23,7 +23,7 @@ public class CadastroArtigo {
 		String tituloArtigo = sc.nextLine().toUpperCase().trim();
 		System.out.println();
 		
-		System.out.println(this.artigoRepository.findByTitulo(tituloArtigo));
+		
 		if(this.cadastraTituloDoArtigo(tituloArtigo)) {
 			return artigo = this.artigoRepository.findByTitulo(tituloArtigo).get();
 		}else {

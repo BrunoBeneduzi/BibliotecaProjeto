@@ -76,7 +76,6 @@ public class AutorModel {
 	
 	public void setLivros(LivroModel livros) {this.livros.add(livros);}
 	
-	
 	public List<ArtigoModel> getArtigos() {return artigos;}
 	
 	public void setArtigos(ArtigoModel artigos) {this.artigos.add(artigos);}
