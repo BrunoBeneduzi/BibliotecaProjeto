@@ -29,7 +29,7 @@ public class BibliotecaMenu {
 			}catch(InputMismatchException e) {
 				sc.nextLine();
 			}
-			
+			System.out.println("-------------------------------------------------------------------------------------");
 			switch(escolha) {
 			case 1:
 				comandoCadastro.menuCadastrar();

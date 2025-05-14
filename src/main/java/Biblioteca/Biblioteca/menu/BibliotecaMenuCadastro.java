@@ -42,6 +42,7 @@ public class BibliotecaMenuCadastro {
 		default:
 			System.out.println("Digito invalido");
 		}
+		System.out.println("-------------------------------------------------------------------------------------");
 	}
 }
 
