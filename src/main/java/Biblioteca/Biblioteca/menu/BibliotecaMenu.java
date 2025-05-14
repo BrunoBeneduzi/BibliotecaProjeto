@@ -48,7 +48,7 @@ public class BibliotecaMenu {
 				default:
 				System.out.println("Digito invalido");
 			}
-			
+			escolha = 0;
 		}while(escolha != 5);
 		System.out.println("Programa encerrado");
 	}

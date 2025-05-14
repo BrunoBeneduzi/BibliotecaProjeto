@@ -17,7 +17,7 @@ public class BibliotecaMenuCadastro {
 	
 	public void menuCadastrar() {
 		
-		System.out.println("Digite o que deseja cadastrar"+"\n1- Cadastrar autor e livro"+"\n2- Cadastrar autor e artigo"+"\n3- cadastrar revista"+"\n4- Vincular Revista no artigo");
+		System.out.print("Digite o que deseja cadastrar"+"\n1- Cadastrar autor e livro"+"\n2- Cadastrar autor e artigo"+"\n3- cadastrar revista"+"\n4- Vincular Revista no artigo"+"\n-> ");
 		
 		try {
 			escolha = sc.nextInt();
