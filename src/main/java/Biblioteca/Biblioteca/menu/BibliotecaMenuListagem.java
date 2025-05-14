@@ -17,7 +17,9 @@ public class BibliotecaMenuListagem {
 	public void menuListagem() {
 		System.out.print("Digite o que deseja exibir"+"\n1- Exibir todos os autores"+"\n2- Exibir todos os livros"+"\n3- Exibir todos os autores com livros vinculados"+
 	"\n4- Filtrar e exibir livros por Titulo"+"\n5- Filtrar e exibir livros por Genero"+"\n6- Filtrar e exibir livros por sobrenome do autor"+
-				"\n7- Exibir revistas"+"\n8- Exibir artigos"+"\n9- Filtrar e exibir revistas por nome ou sobrenome dos autores"+"\n-> ");
+				"\n7- Exibir revistas"+"\n8- Exibir artigos"+"\n9- Filtrar e exibir revistas por nome ou sobrenome dos autores"+"\n10- Filtrar revistas por titulo"
+	+"\n-> ");
+
 		
 		try {
 			escolha = sc.nextInt();
@@ -53,6 +55,9 @@ public class BibliotecaMenuListagem {
 			break;
 		case 9:
 			listar.listarRevistasPorSobreNomeDoAutor();//faz o filtro verificando quais revistas tem artigos vinculados a um autor, ou seja, se a revista tem 3 artigos de 3 autores diferentes, vai exibir a revista e os autores
+			break;
+		case 10:
+			listar.listarPorTituloDaRevista();
 			break;
 		default:
 			System.out.println("Numero invalido");

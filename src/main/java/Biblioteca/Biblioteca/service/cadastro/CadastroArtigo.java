@@ -14,8 +14,6 @@ public class CadastroArtigo {
 	private ArtigoRepository artigoRepository;
 	
 	
-	
-	
 	public ArtigoModel adicionarArtigoNaLista() {
 		ArtigoModel artigo = null;
 		

@@ -51,5 +51,9 @@ public class BibliotecaServiceListagem {
 			this.listarComFiltroRevista.exibeRevistasAutoresComArtigosVinculados();
 	}
 	
+	public void listarPorTituloDaRevista() {
+		this.listarComFiltroRevista.listarRevistaPorTitulo();
+	}
+	
 	
 }
