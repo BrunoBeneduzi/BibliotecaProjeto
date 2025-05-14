@@ -28,7 +28,7 @@ public class CadastroAutor {
     	
 
     	if(this.cadastraNomeEsobrenome(nomeCompleto)) {
-    		return autor = this.autorRepository.cadastrarCacheDeAutor(nomeCompleto);
+    		return autor = this.autorRepository.cadastrarCacheDeAutor(nomeCompleto);//se o nome existir, vai trazer de volta os dados desse autor, para nao precisar cadastrar novamente 
     	}else {
     		autor = new AutorModel(nomeCompleto, this.CadastraData(), this.cadastraNacionalidade().toUpperCase());
     	}

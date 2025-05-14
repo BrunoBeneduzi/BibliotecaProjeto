@@ -1,5 +1,6 @@
 package Biblioteca.Biblioteca.menu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,9 +23,12 @@ public class BibliotecaMenu {
 		do {
 			System.out.print("Digite o que deseja fazer: "+"\n1- Cadastrar"+"\n2- Exibir"+"\n3- Atualizar"+"\n4- Excluir"+"\n5- Encerrar programa"+"\n-> ");
 			
-			escolha = sc.nextInt();
-			
-			sc.nextLine();
+			try {
+				escolha = sc.nextInt();
+				sc.nextLine();
+			}catch(InputMismatchException e) {
+				sc.nextLine();
+			}
 			
 			switch(escolha) {
 			case 1:

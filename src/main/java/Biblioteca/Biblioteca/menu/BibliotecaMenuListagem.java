@@ -1,5 +1,6 @@
 package Biblioteca.Biblioteca.menu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +13,18 @@ public class BibliotecaMenuListagem {
 	private Scanner sc = new Scanner(System.in);
 	@Autowired
 	private BibliotecaServiceListagem listar;
-
+	private int escolha = 0;
 	public void menuListagem() {
 		System.out.print("Digite o que deseja exibir"+"\n1- Exibir todos os autores"+"\n2- Exibir todos os livros"+"\n3- Exibir todos os autores com livros vinculados"+
 	"\n4- Filtrar e exibir livros por Titulo"+"\n5- Filtrar e exibir livros por Genero"+"\n6- Filtrar e exibir livros por sobrenome do autor"+
 				"\n7- Exibir revistas"+"\n8- Exibir artigos"+"\n9- Filtrar e exibir revistas por nome ou sobrenome dos autores"+"\n-> ");
 		
-		int escolha = sc.nextInt();
-		sc.nextLine();
+		try {
+			escolha = sc.nextInt();
+			sc.nextLine();
+		}catch(InputMismatchException e) {
+			sc.nextLine();
+		}
 		
 		switch(escolha) {
 		case 1:

@@ -1,5 +1,6 @@
 package Biblioteca.Biblioteca.menu;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import Biblioteca.Biblioteca.service.cadastro.BibliotecaServiceCadastro;
 @Service
 public class BibliotecaMenuCadastro {
 	private Scanner sc = new Scanner(System.in);
+	private int escolha = 0;
 	@Autowired
 	private BibliotecaServiceCadastro cadastro;
 	
@@ -17,8 +19,12 @@ public class BibliotecaMenuCadastro {
 		
 		System.out.println("Digite o que deseja cadastrar"+"\n1- Cadastrar autor e livro"+"\n2- Cadastrar autor e artigo"+"\n3- cadastrar revista"+"\n4- Vincular Revista no artigo");
 		
-		int escolha = sc.nextInt();
-		sc.nextLine();
+		try {
+			escolha = sc.nextInt();
+			sc.nextLine();
+		}catch(InputMismatchException e) {
+			sc.nextLine();
+		}
 		
 		switch(escolha) {
 		case 1:
