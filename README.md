@@ -1,46 +1,73 @@
-## Biblioteca
-projeto biblioteca com conexão ao banco de dados, contendo 4 classes, e um sistema de filtro, cadastro, ediçao e atualização
+# 📚 Biblioteca - Projeto Java
 
-Objetivo do projeto:
-Biblioteca: Com armazenamento em um banco de dados implementar o gerenciamento de
+Este é um projeto de **Biblioteca** com conexão ao banco de dados, implementando o gerenciamento de **livros**, **revistas** e **artigos**. O sistema permite a criação, alteração, exclusão e listagem desses itens com filtros por **título**, **gênero literário** e **nome completo do autor**.
 
-livros e revistas, onde: os livros possuem título, gênero literário, um ou mais autores, editora
+## 🎯 Objetivo do Projeto
 
-e data de publicação; A revista possui editora, número da edição, data de publicação e
+O objetivo deste projeto é implementar o gerenciamento de **livros**, **revistas** e **artigos** com armazenamento em banco de dados. As funcionalidades incluem:
 
-artigos, que por sua vez, possuem título, o texto da publicação e autores. Os autores devem
+### 📖 Livros:
+- Cadastro de livros com título, gênero literário, um ou mais autores, editora e data de publicação.
+- Filtros para a listagem dos livros por título, gênero literário e nome completo do autor.
+- Edição e exclusão de livros.
 
-ter nome, sobrenome, data de nascimento e nacionalidade.
+### 📘 Revistas:
+- Cadastro de revistas com editora, número da edição, data de publicação e artigos.
+- Artigos possuem título, texto da publicação e autores.
+- Filtros para a listagem das revistas por título, gênero literário e nome completo do autor.
+- Edição e exclusão de revistas.
 
-4.1. Criação de um novo livro, alteração das informações do livro, exclusão e a listagem
+### 📝 Artigos:
+- Cadastro de artigos com título, texto da publicação e autores.
+- Cada artigo pertence a uma revista.
+- Filtros para a listagem de artigos por título e autor.
 
-dos livros com os filtros de título, gênero literário e sobrenome do autor ;
+### 👤 Autores:
+- Cadastro de autores com **nome completo**, data de nascimento e nacionalidade.
 
-4.2. Criação de uma nova revista, alteração das informações da revista, exclusão e a
+## ⚙️ Funcionalidades
 
-listagem com os filtros de título, gênero literário e sobrenome do autor ;
+- **Livros:**
+  - Criação de um novo livro.
+  - Alteração das informações do livro.
+  - Exclusão de livros.
+  - Listagem dos livros com filtros por título, gênero literário e nome completo do autor.
 
-## Como rodar o projeto:
-1 - Pode ser usado qualquer IDE que rode java, eu recomendo o eclipse, que foi o que utilizei nesse projeto.
+- **Revistas:**
+  - Criação de uma nova revista.
+  - Alteração das informações da revista.
+  - Exclusão de revistas.
+  - Listagem das revistas com filtros por título, gênero literário e nome completo do autor.
 
-1.1 - como baiaxr: https://www.youtube.com/watch?v=KWGIaWh71q4 <- esse video mostra como baixar a IDE, o link para o download está na bio do video.
+- **Artigos:**
+  - Criação de um novo artigo.
+  - Alteração das informações do artigo.
+  - Exclusão de artigos.
+  - Listagem dos artigos com filtros por título e autor.
 
-2 - Utilizei do banco PostGreSQL, mas você pode usar o que preferir, mas caso queira usar o postGreSQL abaixo vai as informações para baixar.
+## 🏗️ Tecnologias Utilizadas
 
-2.2 - Link para baixar o PostGreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+- **Java** ☕
+- **Spring Boot** 🚀
+- **JPA (Java Persistence API)** 🔗
+- **PostgreSQL** 🗄️
 
-2.3 - tutorial de como baixar PostGreSQL: https://www.youtube.com/watch?v=UbX-2Xud1JA
+## 🔧 Como Rodar o Projeto
 
-2.4 - Quando for criar o banco de dados, coloque o nome do database de: "BibliotecaProjeto" <- sem as aspas
+1. 💻 **IDE recomendada**: Qualquer IDE que suporte Java. Eu recomendo o **Eclipse** para facilitar o processo, pois foi utilizado neste projeto.
 
-2.5 - Em application.properties você vai precisar alterar o login e senha de acordo com o que você configurou no seu banco, exemplo abaixo:
+   1.1. [Como baixar o Eclipse?](https://www.youtube.com/watch?v=KWGIaWh71q4)
 
-spring.datasource.username=postgres
+2. 🗄️ Este projeto utiliza o banco de dados **PostgreSQL**, mas você pode usar outro banco de sua preferência. Caso queira usar o **PostgreSQL**, siga as instruções abaixo:
 
-spring.datasource.password=1234
+   2.1. [Link para baixar o PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
-2.6 - Feito isso é só dar play no projeto, que as tabelas vão ser criadas automaticamente e o banco vai ser populado por alguns informações.
+   2.2. [Tutorial de como baixar o PostgreSQL](https://www.youtube.com/watch?v=UbX-2Xud1JA)
 
-2.7 - Dentro da pasta SRC/MAIN/JAVA, vai ter um .TXT com o seguinte nome "informacoes do banco de dados", nele vai ter as informações que 
-foram para o banco de dados no momento em que voce deu play, vão ser uteis caso você queira fazer testes de listam, exclusão e edição sem precisar cadastrar, 
-mas caso queira cadastrar manualmente, vai ter o MenuCadastro que vai te guiar no cadastro.
+   2.3. Ao criar o banco de dados, defina o nome do database como **"BibliotecaProjeto"** (sem aspas).
+
+3. 📝 No arquivo `application.properties`, altere o login e a senha de acordo com as configurações do seu banco. Exemplo:
+
+   ```properties
+   spring.datasource.username=postgres
+   spring.datasource.password=1234
