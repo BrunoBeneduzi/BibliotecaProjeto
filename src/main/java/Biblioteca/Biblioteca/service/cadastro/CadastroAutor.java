@@ -32,7 +32,7 @@ public class CadastroAutor {
     	}else {
     		autor = new AutorModel(nomeCompleto, this.CadastraData(), this.cadastraNacionalidade().toUpperCase());
     	}
-    	
+    	 
     	return autor;
     }
     

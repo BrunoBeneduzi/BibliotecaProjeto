@@ -18,7 +18,7 @@ public class CadastroRevista {
 	
 	private RevistaModel adicionarRevistaNaLista() {
 		RevistaModel revista = null;
-    	
+    	 
     	String nomeEditora = this.cadastrarNomeEditora();
     	int numEdicao = this.cadastraNumeroDeEdicao(nomeEditora);
     
@@ -77,6 +77,6 @@ public class CadastroRevista {
 	   }while(verifica);
 	   
 	   return numEdicao;
-   }
+   } 
 	
 }

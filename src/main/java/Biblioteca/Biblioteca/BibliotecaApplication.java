@@ -22,6 +22,7 @@ public class BibliotecaApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		try {
+			System.out.println("entrou");
 			popularBanco.popularBanco();//colocando dados no banco de dados
 		}catch(Exception e) {
 			
