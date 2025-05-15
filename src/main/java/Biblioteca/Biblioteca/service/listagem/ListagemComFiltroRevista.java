@@ -1,16 +1,12 @@
 package Biblioteca.Biblioteca.service.listagem;
 
 import java.util.List;
-import java.util.Optional;
+
 import java.util.Scanner;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import Biblioteca.Biblioteca.model.ArtigoModel;
 import Biblioteca.Biblioteca.model.AutorModel;
-import Biblioteca.Biblioteca.model.LivroModel;
 import Biblioteca.Biblioteca.model.RevistaModel;
 import Biblioteca.Biblioteca.repository.AutorRepository;
 import Biblioteca.Biblioteca.repository.RevistaReposiroty;
@@ -35,13 +31,16 @@ public class ListagemComFiltroRevista {
 		
 		List<AutorModel> autor = this.autorRepository.findArtigosByAutorSobrenome(nome);
 		
-		
-		for(AutorModel autorLista: autor) {
-			System.out.println(autorLista);
-			for(ArtigoModel artigoLista: autorLista.getArtigos()) {
-				System.out.println(artigoLista.getRevista());
-			}
-		}	
+		if(!autor.isEmpty()){
+			for(AutorModel autorLista: autor) {
+				System.out.println(autorLista);
+				for(ArtigoModel artigoLista: autorLista.getArtigos()) {
+					System.out.println(artigoLista.getRevista());
+				}
+			}	
+		}else {
+			System.out.println("------------------ LISTA VAZIA --------------");
+		}
 	}
 	
 	public void exibeRevistas() {
