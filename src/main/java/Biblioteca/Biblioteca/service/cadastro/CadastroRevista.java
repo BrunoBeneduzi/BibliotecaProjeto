@@ -1,6 +1,7 @@
 package Biblioteca.Biblioteca.service.cadastro;
 
 import java.time.LocalDate;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,13 +63,19 @@ public class CadastroRevista {
 	   System.out.print("Digite o numero da edição -> ");
 	   
 	   do {
-		   numEdicao = sc.nextInt();
-		   if(this.revistaReposiroty.findByEditoraAndNumeroDeEdicao(editora, numEdicao).isPresent()) {
-			   System.out.print("Numero de edição já cadastrado, tente novamente -> ");
+		   try {
+			   numEdicao = sc.nextInt();
+				   if(this.revistaReposiroty.findByEditoraAndNumeroDeEdicao(editora, numEdicao).isPresent()) {
+					   System.out.print("Numero de edição já cadastrado, tente novamente -> ");
+					   sc.nextLine();
+				   }else {
+					   verifica = false;
+				   }
+		   }catch(InputMismatchException e) {
+			   System.out.print("Digite um numero valido -> ");
 			   sc.nextLine();
-		   }else {
-			   verifica = false;
 		   }
+		     
 	   }while(verifica);
 	   
 	   return numEdicao;
