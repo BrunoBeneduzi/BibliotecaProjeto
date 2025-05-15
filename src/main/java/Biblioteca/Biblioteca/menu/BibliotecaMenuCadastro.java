@@ -31,7 +31,7 @@ public class BibliotecaMenuCadastro {
 			cadastro.cadastrarLivroEautor();
 			break;
 		case 2:
-			cadastro.cadastrarArtigoEautor();//caso o autor já exista, vai ser puxado as informações dele para o artigo novo, um cache
+			cadastro.cadastrarArtigoEautor();//caso o autor já exista, vai ser puxado as informações dele para o artigo novo
 			break;
 		case 3:
 			cadastro.cadastrarRevista();

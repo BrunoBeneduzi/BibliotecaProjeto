@@ -33,14 +33,14 @@ public class CadastroLivro {
 	    Boolean verifica = true;
 	    	
 	    System.out.print("Digite o nome do livro-> ");
-	    do {
-	    		tituloLivro = sc.nextLine().toUpperCase();
-		    if(livrosRepository.findByTitulo(tituloLivro).isPresent()) {
-		    	System.out.print("O nome já foi cadastrado, digite outro novamente ->");
-		    }else {
-		    	verifica = false;
-		    }
-	    }while(verifica);
+		    do {
+		    		tituloLivro = sc.nextLine().toUpperCase();
+			    if(livrosRepository.findByTitulo(tituloLivro).isPresent()) {
+			    	System.out.print("O nome já foi cadastrado, digite outro novamente ->");
+			    }else {
+			    	verifica = false;
+			    }
+		    }while(verifica);
 	    	
 	    return tituloLivro;
 	  }

@@ -16,8 +16,6 @@ public class CadastroRevista {
 	@Autowired
 	private RevistaReposiroty revistaReposiroty;
 	
-	
-	
 	private RevistaModel adicionarRevistaNaLista() {
 		RevistaModel revista = null;
     	

@@ -27,7 +27,7 @@ public class CadastroAutor {
     	String nomeCompleto = sc.nextLine().toUpperCase().trim();
     	
 
-    	if(this.cadastraNomeEsobrenome(nomeCompleto)) {
+    	if(this.verificaSeNomeJaExiste(nomeCompleto)) {
     		return autor = this.autorRepository.cadastrarCacheDeAutor(nomeCompleto);//se o nome existir, vai trazer de volta os dados desse autor, para nao precisar cadastrar novamente 
     	}else {
     		autor = new AutorModel(nomeCompleto, this.CadastraData(), this.cadastraNacionalidade().toUpperCase());
@@ -37,7 +37,7 @@ public class CadastroAutor {
     }
     
     
-    private Boolean cadastraNomeEsobrenome(String nomeCompleto) {
+    private Boolean verificaSeNomeJaExiste(String nomeCompleto) {
     	
     	if(this.autorRepository.findByNomeCompleto(nomeCompleto).isPresent()) {
     		return true;
